@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Dropdown Kabupaten dan Kecamatan</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Pilih Kabupaten dan Kecamatan</h2>
+        
+        <div class="form-group">
+            <label for="kabupaten-dropdown">Kabupaten:</label>
+            <select id="kabupaten-dropdown" class="form-control">
+                <option value="">Pilih Kabupaten</option>
+                <option value="Pandeglang">Kabupaten Pandeglang</option>
+                <option value="Lebak">Kabupaten Lebak</option>
+                <option value="Serang">Kabupaten Serang</option>
+                <option value="Tangerang">Kabupaten Tangerang</option>
+                <option value="Cilegon">Kota Cilegon</option>
+                <option value="Serang Kota">Kota Serang</option>
+                <option value="Tangerang Kota">Kota Tangerang</option>
+                <option value="Tangerang Selatan">Kota Tangerang Selatan</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="kecamatan-dropdown">Kecamatan:</label>
+            <select id="kecamatan-dropdown" class="form-control" disabled>
+                <option value="">Pilih Kecamatan</option>
+            </select>
+        </div>
+
+        <h3 class="mt-4">Hasil:</h3>
+        <div id="output"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        // Mengubah dropdown kecamatan berdasarkan kabupaten yang dipilih
+        const kabupatenDropdown = document.getElementById("kabupaten-dropdown");
+        const kecamatanDropdown = document.getElementById("kecamatan-dropdown");
+        const outputDiv = document.getElementById("output");
+
+        kabupatenDropdown.addEventListener("change", function() {
+            const selectedKabupaten = kabupatenDropdown.value;
+
+            // Mengosongkan dan meng-enable dropdown kecamatan
+            kecamatanDropdown.innerHTML = '<option value="">Pilih Kecamatan</option>';
+            kecamatanDropdown.disabled = false;
+
+            // Menentukan kecamatan berdasarkan kabupaten yang dipilih
+            if (selectedKabupaten === "Pandeglang") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A01">Angsana</option>
+                    <option value="A02">Banjar</option>
+                    <option value="A03">Bojong</option>
+                    <option value="A04">Cadasari</option>
+                    <option value="A05">Carita</option>
+                    <option value="A06">Cisata</option>
+                    <option value="A07">Cibaliung</option>
+                    <option value="A08">Cibitung</option>
+                    <option value="A09">Cigeulis</option>
+                    <option value="A10">Cikeusik</option>
+                    <option value="A11">Cikedal</option>
+                    <option value="A12">Cimanggu</option>
+                    <option value="A13">Cimanuk</option>
+                    <option value="A14">Cipeucang</option>
+                    <option value="A15">Cipanas</option>
+                    <option value="A16">Cisata</option>
+                    <option value="A17">Jiput</option>
+                    <option value="A18">Kaduhejo</option>
+                    <option value="A19">Karang Tanjung</option>
+                    <option value="A20">Koroncong</option>
+                    <option value="A21">Labuan</option>
+                    <option value="A22">Mandalawangi</option>
+                    <option value="A23">Mekarjaya</option>
+                    <option value="A24">Menes</option>
+                    <option value="A25">Munjul</option>
+                    <option value="A26">Pagelaran</option>
+                    <option value="A27">Pandeglang</option>
+                    <option value="A28">Panimbang</option>
+                    <option value="A29">Patia</option>
+                    <option value="A30">Picung</option>
+                    <option value="A31">Saketi</option>
+                    <option value="A32">Sindangresmi</option>
+                    <option value="A33">Sobang</option>
+                    <option value="A34">Sukaresmi</option>
+                    <option value="A35">Sumur</option>
+                `;
+            } else if (selectedKabupaten === "Lebak") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A36">Bayah</option>
+                    <option value="A37">Banjarsari</option>
+                    <option value="A38">Bojongmanik</option>
+                    <option value="A39">Cibadak</option>
+                    <option value="A40">Cibeber</option>
+                    <option value="A41">Cigemblong</option>
+                    <option value="A42">Cihara</option>
+                    <option value="A43">Cijaku</option>
+                    <option value="A44">Cikulur</option>
+                    <option value="A45">Cileles</option>
+                    <option value="A46">Cilograng</option>
+                    <option value="A47">Cimarga</option>
+                    <option value="A48">Cipayung</option>
+                    <option value="A49">Cirinten</option>
+                    <option value="A50">Curugbitung</option>
+                    <option value="A51">Gunungkencana</option>
+                    <option value="A52">Kalanganyar</option>
+                    <option value="A53">Lebak Gedong</option>
+                    <option value="A54">Leuwidamar</option>
+                    <option value="A55">Maja</option>
+                    <option value="A56">Malingping</option>
+                    <option value="A57">Muncang</option>
+                    <option value="A58">Panggarangan</option>
+                    <option value="A59">Rangkasbitung</option>
+                    <option value="A60">Sajira</option>
+                    <option value="A61">Sobang</option>
+                    <option value="A62">Warunggunung</option>
+                    <option value="A63">Wanasalam</option>
+                `;
+            } else if (selectedKabupaten === "Serang") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A64">Anyar</option>
+                    <option value="A65">Baros</option>
+                    <option value="A66">Binuang</option>
+                    <option value="A67">Bojonegara</option>
+                    <option value="A68">Carenang</option>
+                    <option value="A69">Cikande</option>
+                    <option value="A70">Cikeusal</option>
+                    <option value="A71">Cinangka</option>
+                    <option value="A72">Ciomas</option>
+                    <option value="A73">Ciruas</option>
+                    <option value="A74">Gunungsari</option>
+                    <option value="A75">Jawilan</option>
+                    <option value="A76">Kopo</option>
+                    <option value="A77">Kragilan</option>
+                    <option value="A78">Kramatwatu</option>
+                    <option value="A79">Mancak</option>
+                    <option value="A80">Pabuaran</option>
+                    <option value="A81">Padarincang</option>
+                    <option value="A82">Pamarayan</option>
+                    <option value="A83">Petir</option>
+                    <option value="A84">Pontang</option>
+                    <option value="A85">Puloampel</option>
+                    <option value="A86">Tanara</option>
+                    <option value="A87">Tirtayasa</option>
+                    <option value="A88">Tunjung Teja</option>
+                    <option value="A89">Waringinkurung</option>
+                `;
+            } else if (selectedKabupaten === "Tangerang") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A90">Balaraja</option>
+                    <option value="A91">Cikupa</option>
+                    <option value="A92">Cisauk</option>
+                    <option value="A93">Curug</option>
+                    <option value="A94">Gunung Kaler</option>
+                    <option value="A95">Jambe</option>
+                    <option value="A96">Jayanti</option>
+                    <option value="A97">Kelapa Dua</option>
+                    <option value="A98">Kemiri</option>
+                    <option value="A99">Kresek</option>
+                    <option value="A100">Kronjo</option>
+                    <option value="A101">Legok</option>
+                    <option value="A102">Mekarbaru</option>
+                    <option value="A103">Pakuhaji</option>
+                    <option value="A104">Panongan</option>
+                    <option value="A105">Pasar Kemis</option>
+                    <option value="A106">Rajeg</option>
+                    <option value="A107">Sepatan</option>
+                    <option value="A108">Sepatan Timur</option>
+                    <option value="A109">Sindang Jaya</option>
+                    <option value="A110">Solear</option>
+                    <option value="A111">Sukadiri</option>
+                    <option value="A112">Sukamulya</option>
+                    <option value="A113">Teluknaga</option>
+                    <option value="A114">Tigaraksa</option>
+                `;
+            } else if (selectedKabupaten === "Cilegon") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A115">Cibeber</option>
+                    <option value="A116">Cilegon</option>
+                    <option value="A117">Citangkil</option>
+                    <option value="A118">Ciwandan</option>
+                    <option value="A119">Grogol</option>
+                    <option value="A120">Jombang</option>
+                    <option value="A121">Pulomerak</option>
+                `;
+            } else if (selectedKabupaten === "Serang Kota") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A122">Cipocok Jaya</option>
+                    <option value="A123">Curug</option>
+                    <option value="A124">Kasemen</option>
+                    <option value="A125">Serang</option>
+                    <option value="A126">Taktakan</option>
+                    <option value="A127">Walantaka</option>
+                `;
+            } else if (selectedKabupaten === "Tangerang Kota") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A128">Batuceper</option>
+                    <option value="A129">Benda</option>
+                    <option value="A130">Cibodas</option>
+                    <option value="A131">Cipondoh</option>
+                    <option value="A132">Jatiuwung</option>
+                    <option value="A133">Karang Tengah</option>
+                    <option value="A134">Karawaci</option>
+                    <option value="A135">Larangan</option>
+                    <option value="A136">Neglasari</option>
+                    <option value="A137">Periuk</option>
+                    <option value="A138">Pinang</option>
+                    <option value="A139">Tangerang</option>
+                `;
+            } else if (selectedKabupaten === "Tangerang Selatan") {
+                kecamatanDropdown.innerHTML += `
+                    <option value="A140">Ciputat</option>
+                    <option value="A141">Ciputat Timur</option>
+                    <option value="A142">Pamulang</option>
+                    <option value="A143">Pondok Aren</option>
+                    <option value="A144">Serpong</option>
+                    <option value="A145">Serpong Utara</option>
+                    <option value="A146">Setu</option>
+                `;
+            }
+        });
+
+        // Mengupdate output ketika kecamatan dipilih
+        kecamatanDropdown.addEventListener("change", function() {
+            const selectedKecamatan = kecamatanDropdown.value;
+
+            if (selectedKecamatan) {
+                const kodeWilayah = selectedKecamatan; // Mengambil kode wilayah
+                outputDiv.innerHTML = `Kode wilayah Anda: ${kodeWilayah} <br> Contoh: ${kodeWilayah}RAHMAD`;
+            } else {
+                outputDiv.innerHTML = ''; // Menghapus output jika tidak ada kecamatan yang dipilih
+            }
+        });
+    </script>
+</body>
+</html>
