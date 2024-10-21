@@ -123,7 +123,7 @@ kecamatanSelect.onchange = function () {
 
     if (kodeWilayah) {
         // Menampilkan output sesuai format yang diinginkan
-        const output = `1. Kode Wilayah: {${kodeWilayah}}<br>2. Contoh: ${kodeWilayah}Rahmad`;
+        const output = `1. Kode Wilayah: {${kodeWilayah}}<br>2. Contoh: ${kodeWilayah}RAHMAD`;
         document.getElementById('kode-wilayah').innerHTML = output;
     } else {
         document.getElementById('kode-wilayah').innerHTML = '';
