@@ -3,48 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Wilayah Lampung</title>
+    <title>Pilih Provinsi</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center">Pilih Wilayah di Lampung</h1>
-        <div class="form-group">
-            <label for="kabupaten">Kabupaten/Kota:</label>
-            <select id="kabupaten" class="form-control" onchange="updateKecamatan()">
-                <option value="">Pilih Kabupaten/Kota</option>
-                <option value="01">Kabupaten Pringsewu</option>
-                <option value="07">Kabupaten Tanggamus</option>
-                <option value="06">Kabupaten Lampung Utara</option>
-                <option value="08">Kabupaten Pesawaran</option>
-                <option value="09">Kabupaten Way Kanan</option>
-                <option value="10">Kabupaten Mesuji</option>
-                <option value="11">Kabupaten Tulang Bawang</option>
-                <option value="12">Kabupaten Tulang Bawang Barat</option>
-                <option value="13">Kota Bandar Lampung</option>
-                <option value="14">Kota Metro</option>
-                <option value="15">Kabupaten Lampung Selatan</option>
-                <option value="16">Kabupaten Lampung Barat</option>
-                <option value="17">Kabupaten Pesisir Barat</option>
-                <option value="18">Kabupaten Lampung Tengah</option>
-                <option value="19">Kabupaten Lampung Timur</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <label for="kecamatan">Kecamatan:</label>
-            <select id="kecamatan" class="form-control" onchange="updateKodeWilayah()">
-                <option value="">Pilih Kecamatan</option>
-            </select>
-        </div>
-
-        <div id="output" class="alert alert-info" style="display: none;">
-            <strong>1. Kode Wilayah :</strong> <span id="kode-wilayah"></span><br>
-            <strong>2. Contoh :</strong> <span id="contoh-output"></span>
-        </div>
+    <div class="container text-center">
+        <h1>Pilih Provinsi di Indonesia</h1>
+        <select id="provinsiDropdown" class="form-control mt-4" onchange="goToPage()">
+            <option value="">-- Pilih Provinsi --</option>
+            <option value="aceh.html">Nanggroe Aceh Darussalam</option>
+            <option value="sumut.html">Sumatera Utara</option>
+            <option value="sumbar.html">Sumatera Barat</option>
+            <option value="riau.html">Riau</option>
+            <option value="kepri.html">Kepulauan Riau</option>
+            <option value="jambi.html">Jambi</option>
+            <option value="bengkulu.html">Bengkulu</option>
+            <option value="sumsel.html">Sumatera Selatan</option>
+            <option value="babel.html">Kepulauan Bangka Belitung</option>
+            <option value="lampung/index.html">Lampung</option>
+            <option value="banten.html">Banten</option>
+            <option value="jakarta.html">DKI Jakarta</option>
+            <option value="jabar.html">Jawa Barat</option>
+            <option value="jateng.html">Jawa Tengah</option>
+            <option value="yogyakarta.html">DI Yogyakarta</option>
+            <option value="jatim.html">Jawa Timur</option>
+            <option value="bali.html">Bali</option>
+            <option value="ntb.html">Nusa Tenggara Barat</option>
+            <option value="ntt.html">Nusa Tenggara Timur</option>
+            <option value="kalbar.html">Kalimantan Barat</option>
+            <option value="kalteng.html">Kalimantan Tengah</option>
+            <option value="kalsel.html">Kalimantan Selatan</option>
+            <option value="kaltim.html">Kalimantan Timur</option>
+            <option value="kalut.html">Kalimantan Utara</option>
+            <option value="sulut.html">Sulawesi Utara</option>
+            <option value="sulteng.html">Sulawesi Tengah</option>
+            <option value="sulsel.html">Sulawesi Selatan</option>
+            <option value="sulbar.html">Sulawesi Barat</option>
+            <option value="sultra.html">Sulawesi Tenggara</option>
+            <option value="gorontalo.html">Gorontalo</option>
+            <option value="maluku.html">Maluku</option>
+            <option value="malut.html">Maluku Utara</option>
+            <option value="papua.html">Papua</option>
+            <option value="papuabarat.html">Papua Barat</option>
+            <option value="papuatengah.html">Papua Tengah</option>
+            <option value="papuapegunungan.html">Papua Pegunungan</option>
+            <option value="papuaselatan.html">Papua Selatan</option>
+            <option value="papuabaratdaya.html">Papua Barat Daya</option>
+        </select>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        function goToPage() {
+            const dropdown = document.getElementById("provinsiDropdown");
+            const selectedValue = dropdown.value;
+
+            if (selectedValue) {
+                window.location.href = selectedValue;
+            }
+        }
+
+        // Tambahkan event listener untuk menangani Enter key
+        document.getElementById("provinsiDropdown").addEventListener("keypress", function(event) {
+            if (event.key === "Enter") {
+                goToPage();
+            }
+        });
+    </script>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
