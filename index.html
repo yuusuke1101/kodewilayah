@@ -1,46 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dropdown Wilayah Provinsi Lampung</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Dropdown Wilayah Lampung</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Pilih Wilayah Provinsi Lampung</h1>
+    <div class="container">
+        <h1>Pilih Wilayah di Lampung</h1>
+        <label for="kabupaten">Kabupaten/Kota:</label>
+        <select id="kabupaten" onchange="updateKecamatan()">
+            <option value="">Pilih Kabupaten/Kota</option>
+            <option value="01">Kabupaten Pringsewu</option>
+            <option value="07">Kabupaten Tanggamus</option>
+            <option value="06">Kabupaten Lampung Utara</option>
+            <option value="08">Kabupaten Pesawaran</option>
+            <option value="09">Kabupaten Way Kanan</option>
+            <option value="10">Kabupaten Mesuji</option>
+            <option value="11">Kabupaten Tulang Bawang</option>
+            <option value="12">Kabupaten Tulang Bawang Barat</option>
+            <option value="13">Kota Bandar Lampung</option>
+            <option value="14">Kota Metro</option>
+        </select>
 
-    <!-- Dropdown untuk Kabupaten/Kota -->
-    <label for="kabupaten">Pilih Kabupaten/Kota:</label>
-    <select id="kabupaten" name="kabupaten" onchange="updateKecamatan()">
-        <option value="">Pilih Kabupaten/Kota</option>
-        <option value="01">Pringsewu</option>
-        <option value="07">Tanggamus</option>
-        <option value="02">Lampung Barat</option>
-        <option value="03">Lampung Selatan</option>
-        <option value="04">Lampung Tengah</option>
-        <option value="05">Lampung Timur</option>
-        <option value="06">Lampung Utara</option>
-        <option value="08">Pesawaran</option>
-        <option value="09">Way Kanan</option>
-        <option value="10">Mesuji</option>
-        <option value="11">Tulang Bawang</option>
-        <option value="12">Tulang Bawang Barat</option>
-        <option value="13">Bandar Lampung</option>
-        <option value="14">Metro</option>
-    </select>
+        <label for="kecamatan">Kecamatan:</label>
+        <select id="kecamatan">
+            <option value="">Pilih Kecamatan</option>
+        </select>
 
-    <br><br>
-
-    <!-- Dropdown untuk Kecamatan -->
-    <label for="kecamatan">Pilih Kecamatan:</label>
-    <select id="kecamatan" name="kecamatan">
-        <option value="">Pilih Kecamatan</option>
-    </select>
-
-    <br><br>
-
-    <div id="kode-wilayah"></div>
-
+        <div id="kode-wilayah"></div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
