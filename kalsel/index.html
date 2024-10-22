@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Wilayah Kalimantan Selatan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Pilih Wilayah di Kalimantan Selatan</h1>
+        <div class="form-group">
+            <label for="kabupaten">Kabupaten/Kota:</label>
+            <select id="kabupaten" class="form-control" onchange="updateKecamatan()">
+                <option value="">Pilih Kabupaten/Kota</option>
+                <option value="01">Kabupaten Balangan</option>
+                <option value="02">Kabupaten Banjar</option>
+                <option value="03">Kabupaten Barito Kuala</option>
+                <option value="04">Kabupaten Hulu Sungai Selatan</option>
+                <option value="05">Kabupaten Hulu Sungai Tengah</option>
+                <option value="06">Kabupaten Hulu Sungai Utara</option>
+                <option value="07">Kabupaten Kotabaru</option>
+                <option value="08">Kabupaten Tabalong</option>
+                <option value="09">Kabupaten Tanah Bumbu</option>
+                <option value="10">Kabupaten Tanah Laut</option>
+                <option value="11">Kabupaten Tapin</option>
+                <option value="12">Kota Banjarbaru</option>
+                <option value="13">Kota Banjarmasin</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="kecamatan">Kecamatan:</label>
+            <select id="kecamatan" class="form-control" onchange="updateKodeWilayah()">
+                <option value="">Pilih Kecamatan</option>
+            </select>
+        </div>
+
+        <div id="output" class="alert alert-info" style="display: none;">
+            <strong>1. Kode Wilayah :</strong> <span id="kode-wilayah"></span><br>
+            <strong>2. Contoh :</strong> <span id="contoh-output"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
