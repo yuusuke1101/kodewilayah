@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kode Wilayah untuk Sumatera  Selatan</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Pilih Kode Wilayah di Sumatera  Selatan</h1>
+        <div class="form-group">
+            <label for="kabupaten">Kabupaten/Kota:</label>
+<select id="kabupaten" class="form-control" onchange="updateKecamatan()">
+    <option value="">Pilih Kabupaten/Kota</option>
+    <option value="01">Kabupaten Banyuasin</option>
+    <option value="02">Kabupaten Empat Lawang</option>
+    <option value="03">Kabupaten Lahat</option>
+    <option value="04">Kabupaten Muara Enim</option>
+    <option value="05">Kabupaten Musi Banyuasin</option>
+    <option value="06">Kabupaten Musi Rawas</option>
+    <option value="07">Kabupaten Musi Rawas Utara</option>
+    <option value="08">Kabupaten Ogan Ilir</option>
+    <option value="09">Kabupaten Ogan Komering Ilir (OKI)</option>
+    <option value="10">Kabupaten Ogan Komering Ulu (OKU)</option>
+    <option value="11">Kabupaten Ogan Komering Ulu Selatan (OKU Selatan)</option>
+    <option value="12">Kabupaten Ogan Komering Ulu Timur (OKU Timur)</option>
+    <option value="13">Kabupaten Penukal Abab Lematang Ilir (PALI)</option>
+    <option value="14">Kota Lubuklinggau</option>
+    <option value="15">Kota Pagar Alam</option>
+    <option value="16">Kota Palembang</option>
+    <option value="17">Kota Prabumulih</option>
+</select>
+
+        </div>
+
+        <div class="form-group">
+            <label for="kecamatan">Kecamatan:</label>
+            <select id="kecamatan" class="form-control" onchange="updateKodeWilayah()">
+                <option value="">Pilih Kecamatan</option>
+            </select>
+        </div>
+
+        <div id="output" class="alert alert-info" style="display: none;">
+            <strong>1. Kode Wilayah :</strong> <span id="kode-wilayah"></span><br>
+            <strong>2. Contoh :</strong> <span id="contoh-output"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
