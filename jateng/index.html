@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Wilayah Jawa Tengah</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Pilih Wilayah di Jawa Tengah</h1>
+        <div class="form-group">
+            <label for="kabupaten">Kabupaten/Kota:</label>
+            <select id="kabupaten" class="form-control" onchange="updateKecamatan()">
+                <option value="">Pilih Kabupaten/Kota</option>
+                <option value="01">Kabupaten Banjarnegara</option>
+                <option value="02">Kabupaten Banyumas</option>
+                <option value="03">Kabupaten Batang</option>
+                <option value="04">Kabupaten Blora</option>
+                <option value="05">Kabupaten Boyolali</option>
+                <option value="06">Kabupaten Brebes</option>
+                <option value="07">Kabupaten Cilacap</option>
+                <option value="08">Kabupaten Demak</option>
+                <option value="09">Kabupaten Grobogan</option>
+                <option value="10">Kabupaten Jepara</option>
+                <option value="11">Kabupaten Karanganyar</option>
+                <option value="12">Kabupaten Kebumen</option>
+                <option value="13">Kabupaten Kendal</option>
+                <option value="14">Kabupaten Klaten</option>
+                <option value="15">Kabupaten Kudus</option>
+                <option value="16">Kabupaten Magelang</option>
+                <option value="17">Kabupaten Pati</option>
+                <option value="18">Kabupaten Pekalongan</option>
+                <option value="19">Kabupaten Pemalang</option>
+                <option value="20">Kabupaten Purbalingga</option>
+                <option value="21">Kabupaten Purworejo</option>
+                <option value="22">Kabupaten Rembang</option>
+                <option value="23">Kabupaten Semarang</option>
+                <option value="24">Kabupaten Sragen</option>
+                <option value="25">Kabupaten Sukoharjo</option>
+                <option value="26">Kabupaten Tegal</option>
+                <option value="27">Kabupaten Temanggung</option>
+                <option value="28">Kabupaten Wonogiri</option>
+                <option value="29">Kabupaten Wonosobo</option>
+                <option value="30">Kota Magelang</option>
+                <option value="31">Kota Pekalongan</option>
+                <option value="32">Kota Salatiga</option>
+                <option value="33">Kota Semarang</option>
+                <option value="34">Kota Surakarta (Solo)</option>
+                <option value="35">Kota Tegal</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="kecamatan">Kecamatan:</label>
+            <select id="kecamatan" class="form-control" onchange="updateKodeWilayah()">
+                <option value="">Pilih Kecamatan</option>
+            </select>
+        </div>
+
+        <div id="output" class="alert alert-info" style="display: none;">
+            <strong>1. Kode Wilayah :</strong> <span id="kode-wilayah"></span><br>
+            <strong>2. Contoh :</strong> <span id="contoh-output"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
