@@ -228,7 +228,7 @@ const kecamatanData = {
         { nama: "Poncowarno", kode: "E204" },
         { nama: "Prembun", kode: "E205" },
         { nama: "Puring", kode: "E206" },
-	{ nama: "Rowokele", kode: "E477" }
+	{ nama: "Rowokele", kode: "E477" },
         { nama: "Sadang", kode: "E207" },
         { nama: "Sempor", kode: "E208" },
         { nama: "Sruweng", kode: "E209" }
