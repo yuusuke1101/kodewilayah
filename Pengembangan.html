@@ -38,9 +38,10 @@
             margin-bottom: 30px;
             line-height: 1.5;
         }
-        .btn {
-            display: inline-block;
-            padding: 12px 25px;
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
             font-size: 16px;
             color: white;
             background-color: #007bff;
@@ -49,8 +50,13 @@
             text-decoration: none;
             transition: background-color 0.3s ease;
         }
-        .btn:hover {
+        .btn-back:hover {
             background-color: #0056b3;
+        }
+        .btn-back svg {
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
         }
     </style>
 </head>
@@ -58,7 +64,13 @@
     <div class="container">
         <h1>Halaman Sedang dalam Pengembangan</h1>
         <p>Maaf, bagian dari halaman ini sedang dalam pengembangan. Kami sedang bekerja keras untuk menyelesaikannya. Mohon ditunggu, terima kasih atas pengertian Anda!</p>
-        <a href="index.html" class="btn">Kembali ke Halaman Utama</a>
+        <a href="index.html" class="btn-back">
+            <!-- Ikon panah kembali -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Kembali ke Halaman Utama
+        </a>
     </div>
 </body>
 </html>
