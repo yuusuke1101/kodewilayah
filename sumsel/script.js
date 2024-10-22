@@ -23,7 +23,7 @@ const kecamatanData = {
         { nama: "Banyuasin Selatan", kode: "D021" }
     ],
     "02": [  // Kabupaten Empat Lawang
-        { nama: "Lahat", kode: "D022" },
+        { nama: "Lintang Kanan", kode: "D022" },
         { nama: "Pendopo", kode: "D023" },
         { nama: "Pendopo Barat", kode: "D024" },
         { nama: "Muara Pinang", kode: "D025" },
