@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Wilayah Aceh</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Pilih Wilayah di Aceh</h1>
+        <div class="form-group">
+            <label for="kabupaten">Kabupaten/Kota:</label>
+            <select id="kabupaten" class="form-control" onchange="updateKecamatan()">
+                <option value="">Pilih Kabupaten/Kota</option>
+                <option value="01">Kabupaten Aceh Barat</option>
+                <option value="02">Kabupaten Aceh Barat Daya</option>
+                <option value="03">Kabupaten Aceh Besar</option>
+                <option value="04">Kabupaten Aceh Jaya</option>
+                <option value="05">Kabupaten Aceh Selatan</option>
+                <option value="06">Kabupaten Aceh Singkil</option>
+                <option value="07">Kabupaten Aceh Tamiang</option>
+                <option value="08">Kabupaten Aceh Tengah</option>
+                <option value="09">Kabupaten Aceh Tenggara</option>
+                <option value="10">Kabupaten Aceh Timur</option>
+                <option value="11">Kabupaten Aceh Utara</option>
+                <option value="12">Kabupaten Bener Meriah</option>
+                <option value="13">Kabupaten Bireuen</option>
+                <option value="14">Kabupaten Gayo Lues</option>
+                <option value="15">Kabupaten Nagan Raya</option>
+                <option value="16">Kabupaten Pidie</option>
+                <option value="17">Kabupaten Pidie Jaya</option>
+                <option value="18">Kabupaten Simeulue</option>
+                <option value="19">Kota Banda Aceh</option>
+                <option value="20">Kota Langsa</option>
+                <option value="21">Kota Lhokseumawe</option>
+                <option value="22">Kota Sabang</option>
+                <option value="23">Kota Subulussalam</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="kecamatan">Kecamatan:</label>
+            <select id="kecamatan" class="form-control" onchange="updateKodeWilayah()">
+                <option value="">Pilih Kecamatan</option>
+            </select>
+        </div>
+
+        <div id="output" class="alert alert-info" style="display: none;">
+            <strong>1. Kode Wilayah :</strong> <span id="kode-wilayah"></span><br>
+            <strong>2. Contoh :</strong> <span id="contoh-output"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
