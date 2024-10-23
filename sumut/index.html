@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Wilayah Sumatera Utara</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Pilih Wilayah di Sumatera Utara</h1>
+        <div class="form-group">
+            <label for="kabupaten">Kabupaten/Kota:</label>
+            <select id="kabupaten" class="form-control" onchange="updateKecamatan()">
+                <option value="">Pilih Kabupaten/Kota</option>
+                <option value="01">Kabupaten Asahan</option>
+                <option value="02">Kabupaten Batu Bara</option>
+                <option value="03">Kabupaten Dairi</option>
+                <option value="04">Kabupaten Deli Serdang</option>
+                <option value="05">Kabupaten Humbang Hasundutan</option>
+                <option value="06">Kabupaten Karo</option>
+                <option value="07">Kabupaten Labuhanbatu</option>
+                <option value="08">Kabupaten Labuhanbatu Selatan</option>
+                <option value="09">Kabupaten Labuhanbatu Utara</option>
+                <option value="10">Kabupaten Langkat</option>
+                <option value="11">Kabupaten Mandailing Natal</option>
+                <option value="12">Kabupaten Nias</option>
+                <option value="13">Kabupaten Nias Barat</option>
+                <option value="14">Kabupaten Nias Selatan</option>
+                <option value="15">Kabupaten Nias Utara</option>
+                <option value="16">Kabupaten Padang Lawas</option>
+                <option value="17">Kabupaten Padang Lawas Utara</option>
+                <option value="18">Kabupaten Pakpak Bharat</option>
+                <option value="19">Kabupaten Samosir</option>
+                <option value="20">Kabupaten Serdang Bedagai</option>
+                <option value="21">Kabupaten Simalungun</option>
+                <option value="22">Kabupaten Tapanuli Selatan</option>
+                <option value="23">Kabupaten Tapanuli Tengah</option>
+                <option value="24">Kabupaten Tapanuli Utara</option>
+                <option value="25">Kabupaten Toba</option>
+                <option value="26">Kota Binjai</option>
+                <option value="27">Kota Gunungsitoli</option>
+                <option value="28">Kota Medan</option>
+                <option value="29">Kota Padangsidempuan</option>
+                <option value="30">Kota Pematangsiantar</option>
+                <option value="31">Kota Sibolga</option>
+                <option value="32">Kota Tanjungbalai</option>
+                <option value="33">Kota Tebing Tinggi</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="kecamatan">Kecamatan:</label>
+            <select id="kecamatan" class="form-control" onchange="updateKodeWilayah()">
+                <option value="">Pilih Kecamatan</option>
+            </select>
+        </div>
+
+        <div id="output" class="alert alert-info" style="display: none;">
+            <strong>1. Kode Wilayah :</strong> <span id="kode-wilayah"></span><br>
+            <strong>2. Contoh :</strong> <span id="contoh-output"></span>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
