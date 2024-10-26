@@ -1,82 +1,49 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pencarian Kode Wilayah</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Pemberitahuan Halaman Dialihkan</title>
     <style>
-        .container {
-            margin-top: 50px;
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .link {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container text-center">
-        <h1>Pilih Provinsi anda di Indonesia</h1>
-        <select id="provinsiDropdown" class="form-control mt-4" onchange="goToPage()">
-            <option value="">-- Pilih Provinsi --</option>
-            <option value="aceh/index.html">Aceh</option>
-            <option value="bali/index.html">Bali</option>
-            <option value="BANTEN/index.html">Banten</option>
-            <option value="bengkulu/index.html">Bengkulu</option>
-	    <option value="yogyakarta/index.html">Daerah Istimewa Yogyakarta</option>
-	    <option value="jakarta/index.html">DKI Jakarta</option>
-            <option value="gorontalo/index.html">Gorontalo</option>
-	    <option value="jambi/index.html">Jambi</option>
-            <option value="jabar/index.html">Jawa Barat</option>
-            <option value="jateng/index.html">Jawa Tengah</option>
-            <option value="jatim/index.html">Jawa Timur</option>
-            <option value="kalbar/index.html">Kalimantan Barat</option>
-            <option value="kalsel/index.html">Kalimantan Selatan</option>
-            <option value="kalteng/index.html">Kalimantan Tengah</option>
-            <option value="kaltim/index.html">Kalimantan Timur</option>
-            <option value="kalut/index.html">Kalimantan Utara</option>
-	    <option value="babel/index.html">Kepulauan Bangka Belitung</option>
-            <option value="kepri/index.html">Kepulauan Riau</option>
-            <option value="Lampung/index.html">Lampung</option>
-            <option value="maluku/index.html">Maluku</option>
-            <option value="malut/index.html">Maluku Utara</option>
-            <option value="ntb/index.html">Nusa Tenggara Barat</option>
-            <option value="ntt/index.html">Nusa Tenggara Timur</option>
-            <option value="papua/index.html">Papua</option>
-            <option value="papuabarat/index.html">Papua Barat</option>
-            <option value="papuabaratdaya/index.html">Papua Barat Daya</option>
-            <option value="papuapegunungan/index.html">Papua Pegunungan</option>
-            <option value="papuaselatan/index.html">Papua Selatan</option>
-            <option value="papuatengah/index.html">Papua Tengah</option>
-            <option value="riau/index.html">Riau</option>
-            <option value="sulbar/index.html">Sulawesi Barat</option>
-            <option value="sulsel/index.html">Sulawesi Selatan</option>
-            <option value="sulteng/index.html">Sulawesi Tengah</option>
-            <option value="sultra/index.html">Sulawesi Tenggara</option>
-            <option value="sulut/index.html">Sulawesi Utara</option>
-            <option value="sumbar/index.html">Sumatera Barat</option>
-            <option value="sumsel/index.html">Sumatera Selatan</option>
-            <option value="sumut/index.html">Sumatera Utara</option>
-        </select>
+
+    <!-- Logo perusahaan di bagian tengah atas -->
+    <img src="be mart logo.png" alt="Logo Perusahaan" class="logo">
+
+    <!-- Pesan informasi -->
+    <div class="message">
+        Mohon maaf atas ketidak nyamanannya, akan tetapi halaman ini telah dialihkan ke halaman berikut 
+        <a href="https://yuusuke1101.github.io/kodewilayahBemat/" class="link">Klik di sini</a> 🙏🙏
     </div>
 
-    <script>
-        function goToPage() {
-            const dropdown = document.getElementById("provinsiDropdown");
-            const selectedValue = dropdown.value;
-
-            if (selectedValue) {
-                window.location.href = selectedValue;
-            }
-        }
-
-        // Tambahkan event listener untuk menangani Enter key
-        document.getElementById("provinsiDropdown").addEventListener("keypress", function(event) {
-            if (event.key === "Enter") {
-                goToPage();
-            }
-        });
-    </script>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
